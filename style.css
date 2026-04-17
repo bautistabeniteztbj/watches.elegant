@@ -1,0 +1,95 @@
+/* Configuración General */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/* Sección Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circle {
+    background-color: black;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-watch {
+    color: #a29bfe; /* Color lila similar al de la imagen */
+    font-size: 28px !important;
+}
+
+.brand-name {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Menú de Navegación */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #666;
+}
+
+/* Iconos de la Derecha */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.actions .material-symbols-outlined {
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Carrito con Notificación */
+.cart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-badge {
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+}
