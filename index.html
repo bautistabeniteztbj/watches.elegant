@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chronos - Exclusiva colección de relojes de lujo, artesanía suiza y elegancia atemporal.">
+    <meta name="keywords" content="relojes, lujo, chronos, alta relojería">
     <title>Chronos - Tiempo Perfecto</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB39ZQJ7YT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-ZB39ZQJ7YT');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZB39ZQJ7YT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZB39ZQJ7YT');
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
 
     <header class="header">
-        <div class="logo-container">
+        <div class="logo-container" role="banner">
             <div class="logo-circle">
-                <span class="material-symbols-outlined icon-watch">watch</span>
+                <span class="material-symbols-outlined icon-watch" aria-hidden="true">watch</span>
             </div>
             <span class="brand-name">CHRONOS</span>
         </div>
 
-        <nav class="nav-menu">
+        <nav class="nav-menu" aria-label="Navegación principal">
             <a href="#inicio">INICIO</a>
             <a href="#lujo">LUJO</a>
             <a href="#deportivo">DEPORTIVO</a>
@@ -33,17 +38,17 @@
         </nav>
 
         <div class="actions">
-            <button class="icon-btn" aria-label="Buscar">
-                <span class="material-symbols-outlined">search</span>
+            <button class="icon-btn" aria-label="Buscar productos">
+                <span class="material-symbols-outlined" aria-hidden="true">search</span>
             </button>
-            <button class="icon-btn" aria-label="Favoritos">
-                <span class="material-symbols-outlined">favorite</span>
+            <button class="icon-btn" aria-label="Ver favoritos">
+                <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
             </button>
-            <button class="icon-btn" aria-label="Mi Perfil">
-                <span class="material-symbols-outlined">person</span>
+            <button class="icon-btn" aria-label="Mi cuenta">
+                <span class="material-symbols-outlined" aria-hidden="true">person</span>
             </button>
-            <div class="cart-container">
-                <span class="material-symbols-outlined">shopping_bag</span>
+            <div class="cart-container" role="button" aria-label="Ver carrito">
+                <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
                 <span class="cart-badge">0</span>
             </div>
         </div>
@@ -61,7 +66,7 @@
                 </p>
                 <a href="#coleccion" class="btn-explore">
                     EXPLORAR COLECCIÓN 
-                    <span class="arrow">→</span>
+                    <span class="arrow" aria-hidden="true">→</span>
                 </a>
             </div>
         </section>
@@ -75,7 +80,7 @@
             <div class="cards-container">
                 <article class="card">
                     <div class="image-wrapper">
-                        <img src="reloj1.jpg" alt="Reloj Chronograph Elite" class="product-img">
+                        <img src="reloj1.jpg" alt="Reloj Chronograph Elite con correa de acero" loading="lazy" class="product-img">
                     </div>
                     <div class="card-content">
                         <span class="category">TEMPUS</span>
@@ -87,7 +92,7 @@
 
                 <article class="card">
                     <div class="image-wrapper">
-                        <img src="reloj2.jpg" alt="Reloj Heritage Classic" class="product-img">
+                        <img src="reloj2.jpg" alt="Reloj Heritage Classic con correa de cuero" loading="lazy" class="product-img">
                     </div>
                     <div class="card-content">
                         <span class="category">ÉLÉGANCE</span>
@@ -99,7 +104,7 @@
 
                 <article class="card">
                     <div class="image-wrapper">
-                        <img src="reloj3.jpg" alt="Reloj Sport Chrono" class="product-img">
+                        <img src="reloj3.jpg" alt="Reloj Sport Chrono resistente al agua" loading="lazy" class="product-img">
                     </div>
                     <div class="card-content">
                         <span class="category">VELOCITY</span>
@@ -115,7 +120,7 @@
             <div class="benefits-grid">
                 <article class="benefit-item">
                     <div class="benefit-icon">
-                        <span class="material-symbols-outlined">verified</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">verified</span>
                     </div>
                     <h3>AUTENTICIDAD GARANTIZADA</h3>
                     <p>Cada reloj viene con certificado de autenticidad y garantía internacional.</p>
@@ -123,7 +128,7 @@
 
                 <article class="benefit-item">
                     <div class="benefit-icon">
-                        <span class="material-symbols-outlined">local_shipping</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
                     </div>
                     <h3>ENVÍO GRATUITO</h3>
                     <p>Envío express gratuito en todos los pedidos, con seguro completo.</p>
@@ -131,7 +136,7 @@
 
                 <article class="benefit-item">
                     <div class="benefit-icon">
-                        <span class="material-symbols-outlined">published_with_changes</span>
+                        <span class="material-symbols-outlined" aria-hidden="true">published_with_changes</span>
                     </div>
                     <h3>DEVOLUCIÓN EN 30 DÍAS</h3>
                     <p>¿No estás satisfecho? Devuelve tu reloj sin preguntas en 30 días.</p>
@@ -140,8 +145,8 @@
         </section>
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #999; font-size: 12px; border-top: 1px solid #eee;">
-        &copy; 2026 CHRONOS Luxury Watches. Todos los derechos reservados.
+    <footer class="footer-main" style="text-align: center; padding: 40px; color: #999; font-size: 12px; border-top: 1px solid #eee;">
+        <p>&copy; 2026 CHRONOS Luxury Watches. Todos los derechos reservados.</p>
     </footer>
 
 </body>
