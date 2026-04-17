@@ -1,4 +1,6 @@
-/* Configuración General */
+/* =========================================
+   CONFIGURACIÓN GENERAL (HEADER)
+   ========================================= */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -92,4 +94,81 @@ body {
     position: absolute;
     top: -5px;
     right: -8px;
+}
+
+/* =========================================
+   ESTILOS DEL MAIN (SECCIÓN HERO)
+   ========================================= */
+.hero-section {
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    max-width: 700px;
+}
+
+/* Títulos */
+.title {
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    line-height: 0.9;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.italic-title {
+    font-family: 'Georgia', serif; /* Usamos una fuente con serifa para el estilo elegante */
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Descripción */
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+    padding: 0 40px;
+}
+
+/* Botón */
+.btn-explore {
+    display: inline-flex;
+    align-items: center;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-explore:hover {
+    background-color: #333333;
+}
+
+.arrow {
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+    .description {
+        font-size: 16px;
+        padding: 0;
+    }
 }
