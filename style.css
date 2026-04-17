@@ -1,11 +1,23 @@
 /* =========================================
-   CONFIGURACIÓN GENERAL (HEADER)
+   CONFIGURACIÓN GENERAL
    ========================================= */
-body {
+* {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
 .header {
     display: flex;
     justify-content: space-between;
@@ -13,162 +25,91 @@ body {
     padding: 15px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Sección Logo */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
+.logo-container { display: flex; align-items: center; gap: 15px; }
 .logo-circle {
-    background-color: black;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #000; width: 45px; height: 45px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
 }
+.icon-watch { color: #a29bfe; font-size: 28px !important; }
+.brand-name { font-size: 24px; letter-spacing: 2px; font-weight: 300; }
 
-.icon-watch {
-    color: #a29bfe; /* Color lila similar al de la imagen */
-    font-size: 28px !important;
+.nav-menu a { 
+    text-decoration: none; color: #000; margin: 0 15px; font-size: 14px; 
+    font-weight: 500; transition: color 0.3s ease; 
 }
+.nav-menu a:hover { color: #666; }
 
-.brand-name {
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-weight: 300;
-}
+.actions { display: flex; gap: 20px; align-items: center; }
+.icon-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; }
 
-/* Menú de Navegación */
-.nav-menu {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #666;
-}
-
-/* Iconos de la Derecha */
-.actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.actions .material-symbols-outlined {
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-}
-
-/* Carrito con Notificación */
-.cart-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
+.cart-container { position: relative; }
 .cart-badge {
-    background-color: black;
-    color: white;
-    font-size: 10px;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -5px;
-    right: -8px;
+    background-color: #000; color: #fff; font-size: 10px; width: 16px; height: 16px; 
+    border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    position: absolute; top: -5px; right: -8px;
 }
 
 /* =========================================
-   ESTILOS DEL MAIN (SECCIÓN HERO)
+   HERO SECTION
    ========================================= */
 .hero-section {
-    height: 100vh; /* Ocupa toda la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+    height: 85vh; display: flex; justify-content: center; align-items: center;
+    text-align: center; background-color: #fcfcfc; padding: 0 20px;
 }
+.title { font-size: clamp(40px, 8vw, 80px); font-weight: 300; letter-spacing: 8px; line-height: 0.9; margin-bottom: 30px; text-transform: uppercase; }
+.italic-title { font-family: 'Georgia', serif; font-style: italic; text-transform: none; }
+.description { max-width: 600px; margin: 0 auto 40px; font-size: 18px; color: #555; }
 
-.content {
-    max-width: 700px;
-}
-
-/* Títulos */
-.title {
-    font-size: 80px;
-    font-weight: 300;
-    letter-spacing: 8px;
-    line-height: 0.9;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-.italic-title {
-    font-family: 'Georgia', serif; /* Usamos una fuente con serifa para el estilo elegante */
-    text-transform: none;
-    font-style: italic;
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-/* Descripción */
-.description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 40px;
-    padding: 0 40px;
-}
-
-/* Botón */
 .btn-explore {
-    display: inline-flex;
-    align-items: center;
-    background-color: #000000;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 15px 40px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease;
+    display: inline-flex; align-items: center; background-color: #000; color: #fff; 
+    padding: 18px 45px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;
 }
+.btn-explore:hover { background-color: #333; transform: translateY(-2px); }
 
-.btn-explore:hover {
-    background-color: #333333;
+/* =========================================
+   COLECCIÓN DESTACADA
+   ========================================= */
+.featured-collection { padding: 100px 40px; }
+.collection-header { text-align: center; margin-bottom: 60px; }
+.collection-header h2 { font-size: 32px; font-weight: 300; letter-spacing: 5px; text-transform: uppercase; }
+
+.cards-container { display: flex; gap: 30px; max-width: 1200px; margin: 0 auto; }
+.image-wrapper { aspect-ratio: 1/1; overflow: hidden; background-color: #f5f5f5; margin-bottom: 20px; }
+.product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.card:hover .product-img { transform: scale(1.08); }
+
+.category { font-size: 11px; color: #999; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 10px; }
+.card h3 { font-size: 22px; margin-bottom: 15px; font-weight: 600; }
+.product-description { font-size: 15px; color: #666; margin-bottom: 20px; min-height: 50px; }
+.price { font-size: 24px; font-weight: 400; color: #000; }
+
+/* =========================================
+   BENEFICIOS
+   ========================================= */
+.benefits-section {
+    padding: 100px 40px; background-color: #fafafa; border-top: 1px solid #eeeeee;
 }
+.benefits-grid { display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 40px; }
+.benefit-item { flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center; }
 
-.arrow {
-    margin-left: 15px;
-    font-size: 18px;
+.benefit-icon {
+    width: 65px; height: 65px; background-color: #000; color: #fff; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; margin-bottom: 25px;
 }
+.benefit-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 15px; letter-spacing: 1px; }
+.benefit-item p { font-size: 14px; color: #777; line-height: 1.6; max-width: 280px; }
 
-/* Responsivo para móviles */
+/* =========================================
+   RESPONSIVO
+   ========================================= */
 @media (max-width: 768px) {
-    .title {
-        font-size: 50px;
-    }
-    .description {
-        font-size: 16px;
-        padding: 0;
-    }
+    .nav-menu { display: none; }
+    .cards-container, .benefits-grid { flex-direction: column; align-items: center; }
+    .card, .benefit-item { width: 100%; max-width: 450px; margin-bottom: 50px; }
+    .title { font-size: 45px; }
 }
